@@ -10,7 +10,7 @@ ul {
 
 li {
   list-style: none;
-  padding: 0 58px;
+  padding: 0 32px;
 }
 
 a {
@@ -19,6 +19,9 @@ a {
   &:hover,
   &:active {
     color: $aquamarineBlue;
+  }
+  p {
+    text-transform: capitalize;
   }
 }
 

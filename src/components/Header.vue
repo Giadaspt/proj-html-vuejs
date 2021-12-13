@@ -2,47 +2,12 @@
   <header >
     <section class="row d-flex">
       <ul>
-        <li>
+        <li v-for="(menu, index) in navbar" :key="index">
           <a href="#">
-            <i class="fas fa-home"></i>
-          </a>
-        </li>
-        <li> 
-          <a href="#">
-            <i class="fab fa-pagelines"></i>
-            <h6>treatments</h6> 
-            <p>face & body</p> 
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-male"></i>
-            <h6>about</h6>
-            <p>our team</p>
-          </a>
-        </li>
-        <li class="logo">
-          <a href="#">
-            <img :src="navbar[2].logo" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-heart"></i>
-            <h6>journal</h6>
-            <p>tips & tricks</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-bookmark"></i>
-            <h6>book now</h6>
-            <p>special offers</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-plus"></i>
+            <img :src="menu.logo" alt="">
+            <i :class="menu.icon"></i>
+            <h6>{{menu.menu}}</h6> 
+            <p>{{menu.undermenu}}</p> 
           </a>
         </li>
       </ul>
@@ -59,10 +24,15 @@ export default {
       
       navbar: [
         {
+          icon: 'fas fa-home',
+        },
+        {
+          icon: 'fab fa-pagelines',
           menu: "treatments",
           underMenu: "face & body",
         },
         {
+          icon: 'fas fa-male',
           menu: "about",
           underMenu: "our team",
         },
@@ -70,12 +40,17 @@ export default {
           logo: require('../assets/img/avada-spa-logo-new.png'),
         },
         {
+          icon:'fas fa-heart',
           menu: "journal",
           underMenu: "tips & tricks",
         },
         {
+          icon:'fas fa-bookmark',
           menu: "book now",
           underMenu: "special offers",
+        },
+        {
+          icon:'fas fa-plus',
         },
       ]
     }

@@ -1,6 +1,5 @@
 main {
   position: relative;
-  color: $whiteColor;
   text-align: center;
 }
 
@@ -8,31 +7,75 @@ img {
   width: 100%;
 }
 
+//all buttons in main
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  padding: 7px 24px;
+  margin: 38px;
+}
+
+.btnFirst {
+  color: $whiteColor;
+  background-color: $swirl;
+  &:hover {
+    color: $whiteColor;
+    background-color: $aquamarineBlue;
+  }
+}
+
+.btnSecond {
+  color: $swirl;
+  border: 3px solid $swirl;
+  &:hover {
+    color: $aquamarineBlue;
+    border:  3px solid $aquamarineBlue;
+  }
+}
+
+//soon under the header
 .centerTextButton {
+  color: $whiteColor;
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   h2 {
-    font-size: 60px;
+    font-size: 48px;
   }
 }
 
 h2, h4 {
   text-transform: capitalize;
 }
+ 
+.LuxuryText {
+  @include center ('both');
+  flex-direction: column;
+  width: 30%;
+  color: $ironsideGrey;
+  margin: 0 auto;
+}
 
-.btn {
-  color: $whiteColor;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  background-color: $swirl;
-  border-radius: 25px;
-  padding: 10px 32px;
-  margin-top: 46px;
-  &:hover {
-    color: $whiteColor;
-    background-color: $aquamarineBlue;
-  }
+.LuxuryText h2 {
+  font-size: 36px;
+  padding-top: 64px;
+}
+
+.leaf {
+  transform: rotate(90deg);
+  font-size: 24px;
+  padding: 16px 0;
+}
+
+.leaf, .topText {
+  color: $malta;
+}
+
+.line {
+  width: 6vw;
+  border-bottom: 1px solid $malta;
+  margin: 50px;
 }

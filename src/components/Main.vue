@@ -1,21 +1,34 @@
 <template>
-  <main >
+  <main>
     <div class="centerTextButton">
-      <h4> give yourself permission </h4>
-      <h2> relax, revite & renjuvinate </h2>
-      <button class="btn"> explore treatments </button>
+      <h4> {{text.overtitle}} </h4>
+      <h2> {{text.title}} </h2>
+      <button class="btn btnFirst"> explore treatments </button>
     </div>
     <img :src="image" alt=""> 
+
+    <LuxuryText/>
   </main>
 </template>
 
 <script>
+import LuxuryText from "./LuxuryText.vue"
+
 export default {
   name: "Main",
+
+  components: {
+    LuxuryText,
+  },
 
   data(){
     return {
       image: require('../assets/img/avada-spa-slider-image-1-new.jpg'),
+
+      text:{
+        overtitle: 'give yourself permission',
+        title: 'relax, revite & renjuvinate',
+      }
     }
   }
 }
