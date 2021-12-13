@@ -1,0 +1,23 @@
+header {
+  @include center ('both');
+  height: 140px;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li .logo {
+  @include center ('both');
+}
+
+h6 {
+  text-transform: uppercase;
+}
