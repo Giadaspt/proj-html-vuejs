@@ -22,7 +22,9 @@
           </a>
         </li>
         <li class="logo">
-          <img :src="logo" alt="">
+          <a href="#">
+            <img :src="navbar[2].logo" alt="">
+          </a>
         </li>
         <li>
           <a href="#">
@@ -54,16 +56,18 @@ export default {
 
   data(){
     return {
-      logo: require('../assets/img/avada-spa-logo-new.png'),
+      
       navbar: [
         {
-          icon: "home-solid.svg",
           menu: "treatments",
           underMenu: "face & body",
         },
         {
           menu: "about",
           underMenu: "our team",
+        },
+        {
+          logo: require('../assets/img/avada-spa-logo-new.png'),
         },
         {
           menu: "journal",
@@ -80,11 +84,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
 @import "../assets/style/general.scss";
 @import "../assets/style/mixin.scss";
 @import "../assets/style/header.scss";
 
-  header{
-    background-color: aquamarine;
-  }
 </style>

@@ -1,22 +1,27 @@
 header {
-  @include center ('both');
-  height: 140px;
   text-align: center;
+  padding-top: 16px;
+}
+
+ul {
+  @include center ('both');
+  flex-direction: row;
 }
 
 li {
-  display: inline-block;
   list-style: none;
-  padding: 0 32px;
+  padding: 0 58px;
 }
 
 a {
+  color: $doveGrey;
   text-decoration: none;
+  &:hover,
+  &:active {
+    color: $aquamarineBlue;
+  }
 }
 
-li .logo {
-  @include center ('both');
-}
 
 h6 {
   text-transform: uppercase;
