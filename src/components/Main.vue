@@ -1,26 +1,32 @@
 <template>
   <main>
-    <div class="heroArea">
-      <h4> {{text.overtitle}} </h4>
-      <h2> {{text.title}} </h2>
-      <button class="btn btnFirst"> explore treatments </button>
-    </div>
-    <img :src="image" alt=""> 
+    <section class="jumbotron"> 
+      <div class="heroArea ">
+        <h4> {{text.overtitle}} </h4>
+        <h2> {{text.title}} </h2>
+        <button class="btn btnFirst"> explore treatments </button>
+      </div>
+      <img :src="image" alt=""> 
+    </section>
 
     <Luxury/>
-
-    <div id="ellipse"></div>
+    <IconAndTextLuxury/>
+     <FaceAndBody/>
   </main>
 </template>
 
 <script>
 import Luxury from "./Luxury.vue"
+import IconAndTextLuxury from "./IconAndTextLuxury.vue"
+import FaceAndBody from "./FaceAndBody.vue"
 
 export default {
   name: "Main",
 
   components: {
     Luxury,
+    IconAndTextLuxury,
+    FaceAndBody,
   },
 
   data(){

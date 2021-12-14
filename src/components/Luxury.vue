@@ -1,5 +1,5 @@
 <template>
-  <div class="middleMain">
+  <div class="Luxury">
     <section class="LuxuryText" >
       <h2> {{text.title}} </h2> 
       <i class="leaf"
@@ -18,25 +18,10 @@
 
       <button class="btn btnSecond"> our approach </button>
     </section>
-
-    <section class="iconText">
-      <div 
-        v-for="(item, index) in middleIcons" :key="index"
-        class="middleIcons">
-        <i 
-          :class="item.icon"
-          class="icons">
-        </i>
-        <p> {{item.text}} </p>
-      </div>
-    </section>
-
-
   </div>
 </template>
 
 <script>
-
 
 export default {
   name: "LuxuryText",
@@ -49,29 +34,6 @@ export default {
         topText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima accusantium exercitationem, voluptates ',
         afterLine: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quisquam aspernatur veritatis voluptatem non qui, cum dignissimos architecto assumenda magni obcaecati',
       },
-
-      middleIcons: [
-        {
-          icon: 'fas fa-sign-language',
-          text: 'massages',
-        },
-        {
-          icon: 'far fa-smile',
-          text: 'therapy',
-        },
-        {
-          icon: 'fas fa-heart',
-          text: 'relaxing',
-        },
-        {
-          icon: 'far fa-moon',
-          text: 'meditation',
-        },
-        {
-          icon: 'fas fa-snowflake',
-          text: 'natural beauty',
-        },
-      ]
     }
   }
 }

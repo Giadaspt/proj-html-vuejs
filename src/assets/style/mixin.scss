@@ -10,3 +10,11 @@
 
   }
 }
+
+@mixin left ($type:'justify'){
+  display: flex;
+  @if $type == 'justify'{
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}

@@ -3,9 +3,14 @@
     <section class="row d-flex">
       <ul>
         <li v-for="(menu, index) in navbar" :key="index">
-          <a href="#">
+          <a 
+            @click="[getIndex(index), item.active = !item.active]"
+            :class="{active: index == indexArr}"
+            href="#">
             <img :src="menu.logo" alt="">
-            <i :class="menu.icon"></i>
+            <i
+              :class="menu.icon">
+              </i>
             <h6>{{menu.menu}}</h6> 
             <p>{{menu.undermenu}}</p> 
           </a>
@@ -52,9 +57,19 @@ export default {
         {
           icon:'fas fa-plus',
         },
-      ]
+      ],
+
+      indexArr: -1,
+      active: false,
+    }
+  },
+  methods: {
+    
+    getIndex(index){
+      this.indexArr = index;
     }
   }
+  
 }
 </script>
 
