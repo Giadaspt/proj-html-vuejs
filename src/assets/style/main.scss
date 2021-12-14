@@ -7,6 +7,24 @@ img {
   width: 100%;
 }
 
+//font in Main 
+.heroArea h2,
+.LuxuryText h2,
+.middleIcons p,
+.faceBodyRight h2,
+.bG h4,
+.text h5 {
+  font-family: "Playfair Display";
+}
+
+.heroArea h4,
+.topText,
+.infoBox h6 {
+  font-family: "Cormorant Garamond";
+
+}
+
+
 //all buttons in main
 .btn {
   font-weight: 600;
@@ -41,6 +59,7 @@ img {
 
 //soon under the header
 .jumbotron {
+  @include center ('both');
   width: 100%;
 }
 
@@ -48,14 +67,14 @@ img {
   color: $whiteColor;
   position: absolute;
   left: 50%;
-  top: 15%;
-  transform: translate(-50%,-15% );
+  top: 7%;
+  transform: translate(-50%, -50% );
   h2 {
     font-size: 48px;
   }
 }
 
-h2, h4, p {
+h2, p {
   text-transform: capitalize;
 }
  
@@ -124,66 +143,24 @@ h2, h4, p {
   font-size: 36px;
 }
 
-/* faceAndBody component of Main */
-.faceBodyTreatments {
-  background-color: $swirlBg;
-  margin-top: -100px;
-  padding-top: 240px;
-}
-
-.picAndText {
-  @include center ('both');
-  width: 60%;
-  margin: 0 auto;
-}
-
-.imageBath {
-  float: left;
-  clear: both;
-  border: 20px solid $whiteColor;
-  box-shadow: 2px 3px 7px -4px $doveGrey;
-  margin-right: 48px;
-}
-
-.faceBodyRight {
-  text-align: left;
-  width: 30%;
-  color: $doveGrey;
-  p {
-    font-size: 11px;
-  }
-}
-
-.infoBox {
-  @include center ('align');
-  text-align: left;
-  color: $malta;
-  border: 1px solid $malta;
-  background-color: $whiteColor;
-  padding-left: 12px;
-  p, i {
-    color: $doveGrey;
-  }
-  p, h6 {
-    text-transform: capitalize;
-    padding-left: 12px;
-  }
-}
-
-.active{
-  color:  $malta;
-}
-
+/* Our Treatments */
 .bG {
   position: relative;
-  height: 250px;
-  padding-top: 100px;
-  h4 {
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    transform: translate(-50%, -75%);
-    color: $whiteColor;
-    text-transform: uppercase;
+  height: 150px;
+  img {
+    height: 100%;
+    object-fit: cover;
   }
 }
+ 
+.bG h4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: $whiteColor;
+  text-transform: uppercase;
+}
+
+
+

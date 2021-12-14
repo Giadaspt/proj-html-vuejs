@@ -1,0 +1,31 @@
+.col-3 {
+  @include center ('both');
+  display: inline-block;
+}
+
+.preview {
+  text-align: left;
+  border: 1px solid $malta;
+}
+
+img {
+  width: 100%;
+}
+
+.text {
+  text-align: left;
+  padding: 24px;
+}
+
+h5 {
+  color: $malta;
+  text-transform: capitalize;
+  border-bottom: 1px solid $malta;
+  padding-bottom: 24px;
+}
+
+p {
+  color: $ironsideGrey;
+  font-size: 13px;
+  padding-top: 20px;
+}

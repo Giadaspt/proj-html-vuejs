@@ -20,12 +20,8 @@
         </div>
         <button class="btn btnFaceBody"> book an appointment </button>
       </div>
-
     </div>
-    <div class="bG">
-      <h4>{{treats}}</h4>
-      <img :src="imageBg" alt="">
-    </div>
+    
   </section>
 </template>
 
@@ -63,8 +59,6 @@ export default {
         },
       ],
 
-      imageBg: require('../assets/img/ptb_cta-new.jpg'),
-      treats: 'our treatments',
       show: false,
       indexArr: -1,
     }
@@ -80,7 +74,7 @@ export default {
         return this.infoBox[this.getIndex].iconPlus
       }
       return this.infoBox[this.getIndex].iconMinus
-    }
+    },
   }
 }
 </script>
@@ -89,5 +83,6 @@ export default {
   @import "../assets/style/vars.scss";
   @import "../assets/style/general.scss";
   @import "../assets/style/mixin.scss";
+  @import "../assets/style/faceBodyTreatments.scss";
   @import "../assets/style/main.scss";
 </style>
