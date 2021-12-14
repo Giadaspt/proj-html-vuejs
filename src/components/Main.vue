@@ -1,24 +1,26 @@
 <template>
   <main>
-    <div class="centerTextButton">
+    <div class="heroArea">
       <h4> {{text.overtitle}} </h4>
       <h2> {{text.title}} </h2>
       <button class="btn btnFirst"> explore treatments </button>
     </div>
     <img :src="image" alt=""> 
 
-    <LuxuryText/>
+    <Luxury/>
+
+    <div id="ellipse"></div>
   </main>
 </template>
 
 <script>
-import LuxuryText from "./LuxuryText.vue"
+import Luxury from "./Luxury.vue"
 
 export default {
   name: "Main",
 
   components: {
-    LuxuryText,
+    Luxury,
   },
 
   data(){

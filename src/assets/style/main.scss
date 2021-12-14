@@ -36,21 +36,27 @@ img {
 }
 
 //soon under the header
-.centerTextButton {
+.heroArea {
   color: $whiteColor;
   position: absolute;
-  bottom: 50%;
+  bottom: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   h2 {
     font-size: 48px;
   }
 }
 
-h2, h4 {
+h2, h4, p {
   text-transform: capitalize;
 }
  
+/* LUXURY COMPOINENT */
+.middleMain,
+#ellipse {
+  background-color: $whiteColor;
+}
+
 .LuxuryText {
   @include center ('both');
   flex-direction: column;
@@ -70,7 +76,7 @@ h2, h4 {
   padding: 16px 0;
 }
 
-.leaf, .topText {
+.leaf, .topText, .middleIcons {
   color: $malta;
 }
 
@@ -78,4 +84,33 @@ h2, h4 {
   width: 6vw;
   border-bottom: 1px solid $malta;
   margin: 50px;
+}
+
+//icon plus text under it (hands, smile, heart etc..)
+.iconText {
+  width: 60%;
+  margin: 60px auto;
+}
+
+.middleIcons  {
+  width: calc(100% / 5);
+  float: left;
+}
+
+.icons.fa-sign-language{
+  transform: scaleX(-1);
+}
+
+.middleIcons:nth-child(even){
+  margin-top: 54px;
+}
+
+.icons {
+  font-size: 36px;
+}
+
+#ellipse {
+  height: 105px;
+  clip-path: ellipse(50% 50%);
+  margin-top: 175px;
 }
