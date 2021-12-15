@@ -6,6 +6,17 @@
         <h2> {{jumbo.title}} </h2>
         <button class="btn btnFirst"> {{jumbo.button}} </button>
       </div>
+      <!-- two little squares on right side of jumbotron -->
+      <div class="demosOnSale">
+        <div class="demos">
+          <img :src="demosAndSale.imageDemos" :alt="demosAndSale.demos">
+          <p> {{demosAndSale.demo}} </p>
+        </div>
+        <div class="onSale">
+          <img :src="demosAndSale.imageCost" :alt="demosAndSale.onSale">
+          <p> {{demosAndSale.onSale}} </p>
+        </div>
+      </div>
       <img :src="jumbo.image" alt=""> 
     </section>
 
@@ -74,7 +85,6 @@ export default {
   data(){
     return {
       treatsCard,
-
       jumbo: {
         image: require('../assets/img/avada-spa-slider-image-1-new.jpg'),
         overtitle: 'Give yourself permission',
@@ -97,6 +107,13 @@ export default {
         lorem: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aspernatur accusantium sed voluptates eos ullam repudiandae, molestiae placeat repellat iure.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aspernatur accusantium sed voluptates ",
         signature: 'frieda friedson, massuese',
       },
+
+      demosAndSale: {
+        imageDemos: require("../assets/img/iconaCheNonRiuscivoATrovare.png"),
+        demo: 'demos',
+        imageCost: require("../assets/img/cost.png"),
+        onSale: 'on sale',
+      }
     }
   }
 }

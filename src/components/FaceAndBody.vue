@@ -5,20 +5,25 @@
         <img :src="image" alt="">
       </div>
       <div class="faceBodyRight">
-        <h2> {{faceAndBody.title}} </h2>
-        <p> {{faceAndBody.text}} </p>
+        <h2> {{bodyCare.title}} </h2>
+        <p class="pText"> {{bodyCare.text}} </p>
 
         <div 
           class="infoBox"
-          v-for="(item, index) in infoBox" :key="index">
-          <i 
-            @click="[iconChange(index), item.show = !item.show]"
-            :class="item.iconPlus">
-          </i>
-          <h6> {{item.title}} </h6>
-          <p> {{item.text}} </p>
+          v-for="(item, index) in faceAndBody" :key="index">
+          <div class="nameInfo">
+            <i 
+              @click="iconChange(), show = !show, getIndex(index)"
+              :class="[index && !show ? item.iconPlus : item.iconMinus  ]">
+            </i>
+            <h6> {{item.titleInfo}} </h6>
+          </div>
+          <p 
+          v-if="show == true && index == indexIcon"
+          :class="{visible: show == true}"
+          class="hide"> {{item.info}} </p>
         </div>
-        <button class="btn btnFaceBody"> book an appointment </button>
+        <button class="btn btnFaceBody"> {{button}} </button>
       </div>
     </div>
     
@@ -26,54 +31,42 @@
 </template>
 
 <script>
+import faceAndBody from "../assets/data/faceAndBody.js";
+
 export default {
   name:"FaceAndBody",
 
   data(){
     return {
+      faceAndBody,
+
       image: require('../assets/img/face_and_body_treatments-new-400x581.jpg'),
 
-      faceAndBody: {
+      bodyCare: {
         title: 'face & body treatments',
         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis expedita minus suscipit voluptatibus ullam dolorum. Soluta esse nobis voluptate',
       },
 
-      infoBox: [
-        {
-          title: 'oil massage',
-          iconPlus:'fas fa-plus-square',
-          iconMinus:'fas fa-minus-square',
-          info: '$62 For 2 hours - Lorem ipsum dolor',
-        },
-        {
-          title: 'manicure',
-          iconPlus:'fas fa-plus-square',
-          iconMinus:'fas fa-minus-square',
-          info: '$62 For 2 hours - Lorem ipsum dolor',
-        },
-        {
-          title: 'aromatherapy',
-          iconPlus:'fas fa-plus-square',
-          iconMinus:'fas fa-minus-square',
-          info: '$62 For 2 hours - Lorem ipsum dolor',
-        },
-      ],
+      button: 'book an appointment',
 
       show: false,
-      indexArr: -1,
+      indexIcon: -1,
     }
   },
 
   methods: {
     getIndex(index){
-      this.indexArr = index ;
+      this.indexIcon = index ;
+      console.log(index);
+      console.log(this.indexIcon);
     },
 
     iconChange(){
-      if (this.show == true) {
-        return this.infoBox[this.getIndex].iconPlus
+      if (this.show == false) {
+        this.faceAndBody.iconPlus
+      } else if (this.show == true) {
+        this.faceAndBody.iconMinus
       }
-      return this.infoBox[this.getIndex].iconMinus
     },
   }
 }

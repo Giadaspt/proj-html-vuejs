@@ -4,7 +4,7 @@
       <ul>
         <li v-for="(menu, index) in header" :key="index">
           <a 
-            @click="[getIndex(index), item.active = !item.active]"
+            @click="[getIndex(index), active = !active]"
             :class="{active: index == indexArr}"
             href="#">
             <img :src="menu.logo" alt="">

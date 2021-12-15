@@ -19,31 +19,49 @@
   margin-right: 48px;
 }
 
+p, i {
+  color: $doveGrey;
+}
+
+p {
+  font-size: 13px; 
+}
+
 .faceBodyRight {
   text-align: left;
   width: 30%;
   color: $doveGrey;
-  p {
-    font-size: 11px;
-  }
+}
+
+.pText {
+  padding: 16px 0;
+}
+
+.infoBox i {
+  padding: 4px;
 }
 
 .infoBox {
-  @include center ('align');
   text-align: left;
   color: $malta;
   border: 1px solid $malta;
   background-color: $whiteColor;
   padding-left: 12px;
-  p, i {
-    color: $doveGrey;
-  }
   p, h6 {
     text-transform: capitalize;
     padding-left: 12px;
   }
 }
 
-.active{
-  color:  $malta;
+.nameInfo {
+  @include center ('align');
+  padding: 8px 0;
+}
+
+.hide{
+  display: none;
+}
+
+.visible {
+  display: block;
 }

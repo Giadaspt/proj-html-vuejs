@@ -1,11 +1,7 @@
 main {
   position: relative;
   text-align: center;
-}
-
-img {
-  width: 100%;
-}
+} 
 
 //font in Main 
 .heroArea h2,
@@ -55,8 +51,8 @@ h2, p {
 }
 
 .btnSecond, .btnFaceBody {
-  color: $swirl;
-  border: 3px solid $swirl;
+  color: $malta;
+  border: 3px solid $malta;
   &:hover {
     color: $aquamarineBlue;
     border:  3px solid $aquamarineBlue;
@@ -75,10 +71,14 @@ h2, p {
   width: 100%;
 }
 
+.heroArea,
+.demosOnSale {
+  position: absolute;
+}
+
 .heroArea {
   width: 80%;
   color: $whiteColor;
-  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -88,6 +88,33 @@ h2, p {
   h4 {
     font-size: 5vh;
   }
+}
+
+// two little squares on right side of jumbotron
+.demosOnSale {
+  right: 15px;
+  top: 30px;
+}
+
+.demos,
+.onSale { 
+  width: 80px;
+  height: 80px;
+  background-color: $whiteColor;
+  border-radius: 10px;
+  margin-top: 12px;
+  text-transform: capitalize;
+  img {
+    width: 70%;
+  }
+  p {
+    font-weight: 600;
+    color: $ironsideGrey;
+  }
+}
+
+.onSale img {
+  padding-top: 8px
 }
 
 // Our Treatments (also a common class with the offer side)
