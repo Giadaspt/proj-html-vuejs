@@ -1,0 +1,29 @@
+.iconBg {
+  @include center ('justify');
+  width: 100%;
+  height: 220px;
+  clip-path: ellipse(51% 48%);
+  background-color: $whiteColor;
+  padding: 32px;
+}
+
+.iconText {
+  width: 60%;
+}
+
+.middleIcons  {
+  width: calc(100% / 5);
+  float: left;
+}
+
+.icons.fa-sign-language{
+  transform: scaleX(-1);
+}
+
+.middleIcons:nth-child(even){
+  margin-top: 54px;
+}
+
+.icons {
+  font-size: 36px;
+}

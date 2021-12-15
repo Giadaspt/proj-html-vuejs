@@ -34,4 +34,6 @@ export default {
   @import "../assets/style/general.scss";
   @import "../assets/style/mixin.scss";
   @import "../assets/style/main.scss";
+  @import "../assets/style/luxury.scss";
+  @import "../assets/style/iconAndTextLuxury.scss";
 </style>

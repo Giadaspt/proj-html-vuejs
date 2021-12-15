@@ -103,11 +103,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/vars.scss";
-@import "../assets/style/general.scss";
-@import "../assets/style/mixin.scss";
-@import "../assets/style/main.scss";
-@import "../assets/style/faceBodyTreatments.scss";
+  @import "../assets/style/vars.scss";
+  @import "../assets/style/general.scss";
+  @import "../assets/style/mixin.scss";
+  @import "../assets/style/main.scss";
+  @import "../assets/style/luxury.scss";
+  @import "../assets/style/iconAndTextLuxury.scss";
+  @import "../assets/style/faceBodyTreatments.scss";
 
 
 </style>

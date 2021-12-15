@@ -70,6 +70,7 @@ h2, p {
 
 //soon under the header, jumbotron
 .jumbotron {
+  position: relative;
   @include center ('both');
   width: 100%;
 }
@@ -79,79 +80,14 @@ h2, p {
   color: $whiteColor;
   position: absolute;
   left: 50%;
-  top: 3%;
-  transform: translate(-50%, 50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   h2 {
     font-size: 10vh;
   }
   h4 {
     font-size: 5vh;
   }
-}
- 
-/* LUXURY COMPOINENT of Main*/
-.Luxury {
-  @include center ('both');
-  flex-direction: column;
-  background-color: $whiteColor;
-}
-
-.LuxuryText {
-  width: 30%;
-  color: $ironsideGrey;
-  margin: 0 auto;
-}
-
-.LuxuryText h2 {
-  font-size: 36px;
-  padding-top: 64px;
-}
-
-.leaf {
-  transform: rotate(90deg);
-  font-size: 24px;
-  padding: 16px 0;
-}
-
-.line {
-  width: 6vw;
-  border-bottom: 1px solid $malta;
-  margin: 50px auto;
-}
-
-.leaf, .topText, .middleIcons {
-  color: $malta;
-}
-
-/* IconAndTextLuxury component of Main*/
-.iconBg {
-  @include center ('justify');
-  width: 100%;
-  height: 220px;
-  clip-path: ellipse(51% 48%);
-  background-color: $whiteColor;
-  padding: 32px;
-}
-
-.iconText {
-  width: 60%;
-}
-
-.middleIcons  {
-  width: calc(100% / 5);
-  float: left;
-}
-
-.icons.fa-sign-language{
-  transform: scaleX(-1);
-}
-
-.middleIcons:nth-child(even){
-  margin-top: 54px;
-}
-
-.icons {
-  font-size: 36px;
 }
 
 // Our Treatments (also a common class with the offer side)

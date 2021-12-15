@@ -9,9 +9,18 @@
     <div 
       class="footerIcons"
       v-for="(item, index) in icons" :key="index">
-      <i 
-      :class="item"></i>
-    </div >
+      <a href="#">
+        <i 
+        :class="item"></i>
+      </a>
+    </div>
+    <div class="goUp">
+      <a href="#">
+        <i 
+        :class="footerDetails.chevron"
+        class="chevron"></i>
+      </a>
+    </div>
   </footer>
 </template>
 
@@ -24,6 +33,7 @@ export default {
       footerDetails: {
         image: require("../assets/img/avada-spa-logo-new.png"),
         text: "copyright 2012 - 2020' | avada theme | all rights receerved | powered by giada",
+        chevron: 'fas fa-chevron-up',
       },
 
       icons: [

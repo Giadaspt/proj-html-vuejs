@@ -1,0 +1,32 @@
+.Luxury {
+  @include center ('both');
+  flex-direction: column;
+  background-color: $whiteColor;
+}
+
+.LuxuryText {
+  width: 30%;
+  color: $ironsideGrey;
+  margin: 0 auto;
+}
+
+.LuxuryText h2 {
+  font-size: 36px;
+  padding-top: 64px;
+}
+
+.leaf {
+  transform: rotate(90deg);
+  font-size: 24px;
+  padding: 16px 0;
+}
+
+.line {
+  width: 6vw;
+  border-bottom: 1px solid $malta;
+  margin: 50px auto;
+}
+
+.leaf, .topText, .middleIcons {
+  color: $malta;
+}
