@@ -13,8 +13,8 @@
           v-for="(item, index) in faceAndBody" :key="index">
           <div class="nameInfo">
             <i 
-              @click="iconChange(), show = !show, getIndex(index)"
-              :class="[index && !show ? item.iconPlus : item.iconMinus  ]">
+              @click="show = !show, getIndex(index)"
+              :class="[index, !show ? item.iconPlus : item.iconMinus]">
             </i>
             <h6> {{item.titleInfo}} </h6>
           </div>
@@ -59,14 +59,6 @@ export default {
       this.indexIcon = index ;
       console.log(index);
       console.log(this.indexIcon);
-    },
-
-    iconChange(){
-      if (this.show == false) {
-        this.faceAndBody.iconPlus
-      } else if (this.show == true) {
-        this.faceAndBody.iconMinus
-      }
     },
   }
 }
