@@ -11,10 +11,12 @@
   }
 }
 
-@mixin left ($type:'justify'){
+@mixin opt ($type:'justify'){
   display: flex;
-  @if $type == 'justify'{
+  @if $type == 'justLeft'{
     justify-content: flex-start;
     flex-direction: column;
+  } @else if $type == 'justAround' {
+    justify-content: space-around;
   }
 }

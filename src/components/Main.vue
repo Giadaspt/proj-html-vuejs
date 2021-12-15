@@ -2,11 +2,11 @@
   <main>
     <section class="jumbotron"> 
       <div class="heroArea ">
-        <h4> {{text.overtitle}} </h4>
-        <h2> {{text.title}} </h2>
-        <button class="btn btnFirst"> explore treatments </button>
+        <h4> {{jumbo.overtitle}} </h4>
+        <h2> {{jumbo.title}} </h2>
+        <button class="btn btnFirst"> {{jumbo.button}} </button>
       </div>
-      <img :src="image" alt=""> 
+      <img :src="jumbo.image" alt=""> 
     </section>
 
     <Luxury/>
@@ -14,9 +14,9 @@
     <FaceAndBody/>
 
     <!-- our treatment part, just image and title before the cards -->
-    <div class="bG">
-      <h4>{{greyBgWithImg.treats}}</h4>
-      <img :src="greyBgWithImg.imageBg" alt="">
+    <div class="bG bGfirst">
+      <h4>{{treatment.treats}}</h4>
+      <img :src="treatment.imageBg" alt="">
     </div>
 
     <TreatsCard
@@ -28,16 +28,27 @@
 
     <!-- soon after the cards -->
     <div class="parfumImg">
-      <img :src="imageFinal" alt="">
-      <div class="cit">
-        <p> "{{lorem}}"... </p>
-        <h5> {{signature}} </h5>
+      <div class="citation">
+        <p> "{{citation.lorem}}..." </p>
+        <h6> {{citation.signature}} </h6>
       </div>
+      <img :src="citation.imageFinal" alt="">
     </div>
 
     <!-- our treatment part, just image and title after the cards -->
-    <div class="bGsecond">
-      
+    <div class="bG bGsecond">
+      <img :src="treatment.imageBg" alt="">
+      <div class="offer">
+        <div class="discount">
+          <h4> {{treatment.off}}  </h4>
+          <p> {{treatment.specialOffer}} </p>
+        </div>
+        <div class="offerText">
+          <h4> {{treatment.takeTime}} </h4>
+          <p> {{treatment.textOffer}} </p>
+        </div>
+        <button class="btn butn"> {{treatment.butn}} </button>
+      </div>
     </div>
   </main>
 </template>
@@ -64,23 +75,28 @@ export default {
     return {
       treatsCard,
 
-      image: require('../assets/img/avada-spa-slider-image-1-new.jpg'),
-
-      text:{
+      jumbo: {
+        image: require('../assets/img/avada-spa-slider-image-1-new.jpg'),
         overtitle: 'Give yourself permission',
         title: 'relax, revite & renjuvinate',
+        button: 'explore treatments',
       },
 
-      greyBgWithImg: {
+      treatment: {
         imageBg: require('../assets/img/ptb_cta-new.jpg'),
         treats: 'our treatments',
+        off: '25%',
+        specialOffer: 'special offer',
+        takeTime: 'Take some time. Treat yourself. You deserve it.',
+        textOffer: 'Book a treatment this month and receive 25% off on all further treatments.',
+        butn: 'book now',
       },
 
-      imageFinal: require("../assets/img/Home-quota-new.jpg"),
-      lorem: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aspernatur accusantium sed voluptates eos ullam repudiandae, molestiae placeat repellat iure.",
-      signature: 'fireda friedson, massuese',
-    
-
+      citation: {
+        imageFinal: require("../assets/img/Home-quota-new.jpg"),
+        lorem: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aspernatur accusantium sed voluptates eos ullam repudiandae, molestiae placeat repellat iure.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aspernatur accusantium sed voluptates ",
+        signature: 'frieda friedson, massuese',
+      },
     }
   }
 }
