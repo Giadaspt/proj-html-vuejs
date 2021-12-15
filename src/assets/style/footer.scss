@@ -1,0 +1,23 @@
+footer {
+  padding: 32px
+}
+
+.footerText {
+  @include center ('justify');
+  width: 70%;
+  color: $doveGrey;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.footerIcons i{
+  @include center ('both');
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  color: $malta;
+  background-color: $swirlBg;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 0 24px ;
+}  

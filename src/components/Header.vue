@@ -2,7 +2,7 @@
   <header >
     <section class="row d-flex">
       <ul>
-        <li v-for="(menu, index) in navbar" :key="index">
+        <li v-for="(menu, index) in header" :key="index">
           <a 
             @click="[getIndex(index), item.active = !item.active]"
             :class="{active: index == indexArr}"
@@ -21,44 +21,14 @@
 </template>
 
 <script>
+import header from "../assets/data/header.js";
+
 export default {
   name: "Header",
 
   data(){
     return {
-      
-      navbar: [
-        {
-          icon: 'fas fa-home',
-        },
-        {
-          icon: 'fab fa-pagelines',
-          menu: "treatments",
-          underMenu: "face & body",
-        },
-        {
-          icon: 'fas fa-male',
-          menu: "about",
-          underMenu: "our team",
-        },
-        {
-          logo: require('../assets/img/avada-spa-logo-new.png'),
-        },
-        {
-          icon:'fas fa-heart',
-          menu: "journal",
-          underMenu: "tips & tricks",
-        },
-        {
-          icon:'fas fa-bookmark',
-          menu: "book now",
-          underMenu: "special offers",
-        },
-        {
-          icon:'fas fa-plus',
-        },
-      ],
-
+      header, 
       indexArr: -1,
       active: false,
     }

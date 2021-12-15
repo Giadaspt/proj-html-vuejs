@@ -16,7 +16,7 @@ export default {
   name: "TreatsCard",
 
   props: {
-    preview: Image,
+    preview: String,
     title: String,
     subTitle: String,
   }

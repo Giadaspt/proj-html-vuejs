@@ -7,7 +7,7 @@
   } @else if $type == 'both' {
     justify-content: center;
     align-items: center;
-
+    align-content: center;
   }
 }
 
@@ -18,5 +18,7 @@
     flex-direction: column;
   } @else if $type == 'justAround' {
     justify-content: space-around;
+  } @else if $type == 'justBetween' {
+    justify-content: space-between;
   }
 }
