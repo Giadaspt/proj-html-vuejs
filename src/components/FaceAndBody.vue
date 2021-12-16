@@ -12,9 +12,10 @@
           class="infoBox"
           v-for="(item, index) in faceAndBody" :key="index">
           <div class="nameInfo">
+            <!-- al click appare il costo e cambia l'icona -->
             <i 
               @click="show = !show, getIndex(index)"
-              :class="[index, !show ? item.iconPlus : item.iconMinus]">
+              :class="[!show ? item.iconPlus : item.iconMinus]">
             </i>
             <h6> {{item.titleInfo}} </h6>
           </div>
@@ -56,7 +57,7 @@ export default {
 
   methods: {
     getIndex(index){
-      this.indexIcon = index ;
+      this.indexIcon = index;
       console.log(index);
       console.log(this.indexIcon);
     },

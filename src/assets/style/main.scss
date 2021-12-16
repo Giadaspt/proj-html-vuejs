@@ -82,12 +82,14 @@ h2, p {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  h2 {
-    font-size: 10vh;
-  }
-  h4 {
-    font-size: 5vh;
-  }
+}
+
+.heroArea h2 {
+  font-size: 10vh;
+}
+
+.heroArea h4 {
+  font-size: 5vh;
 }
 
 // two little squares on right side of jumbotron
@@ -104,13 +106,16 @@ h2, p {
   border-radius: 10px;
   margin-top: 12px;
   text-transform: capitalize;
-  img {
-    width: 70%;
-  }
-  p {
-    font-weight: 600;
-    color: $ironsideGrey;
-  }
+}
+
+.demos img,
+.onSale img {
+  width: 70%;
+}
+
+.demosOnSale p {
+  font-weight: 600;
+  color: $ironsideGrey;
 }
 
 .onSale img {
@@ -120,10 +125,11 @@ h2, p {
 // Our Treatments (also a common class with the offer side)
 .bG {
   position: relative;
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+}
+
+.bG img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .bGfirst {
@@ -154,21 +160,25 @@ h2, p {
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  p {
-    text-transform: none;
-  }
-  h6 {
-    font-weight: 600;
-  }
+}
+
+.citation p {
+  text-transform: none;
+  color: $whiteColor;
+}
+
+.citation h6 {
+  font-weight: 600;
 }
 
 // offer side with the 25% off
 .bGsecond {
   height: 250px;
   text-align: left;
-  p {
-    font-size: 12px;
-  }
+}
+
+.bGsecond p {
+  font-size: 12px;
 }
 
 .offer {
@@ -181,12 +191,18 @@ h2, p {
   flex-direction: column;
   width: 120px;
   height: 100px;
+  color: $whiteColor;
   padding: 8px;
   margin-right: 32px;
   border: 1px solid $swirl;
-  h4 {
-    font-size: 40px;
-  } 
+}
+
+.discount h4 {
+  font-size: 40px;
+} 
+
+.offer p {
+  color: $whiteColor;
 }
 
 .offerText {

@@ -8,16 +8,42 @@
   border: 1px solid $malta;
 }
 
-img {
-  width: 100%;
+.imageTreats{
+  @include center ('both');
+  width: 429px;
+  height: 471px;
+  background-color: $malta;
+  position: relative;
 }
+
+.imgTitle {
+  display: none;
+  @include center ('align');
+  text-align: center;
+  color: $whiteColor;
+  font-family: "Playfair Display";
+  text-transform: capitalize;
+  &:hover {
+    display: block ;
+  }
+}
+
+.imageTreats img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  &:hover {
+    display: none;
+  }
+}
+
 
 .text {
   text-align: left;
   padding: 24px;
 }
 
-h5 {
+.text h5 {
   font-family: "Playfair Display";
   color: $malta;
   text-transform: capitalize;
@@ -25,7 +51,7 @@ h5 {
   padding-bottom: 24px;
 }
 
-p {
+.text p {
   color: $ironsideGrey;
   font-size: 13px;
   padding-top: 20px;

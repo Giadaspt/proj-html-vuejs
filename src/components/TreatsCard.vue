@@ -1,7 +1,11 @@
 <template>
   <div class="col-3 ">
     <div class=" preview">
-      <img :src="preview" alt="">
+      <div class="imageTreats">
+        <h4 class="imgTitle"> {{title}} </h4>
+        <img :src="preview" :alt="title">
+      </div>
+
       <div class="text">
         <h5> {{title}} </h5>
         <div class="divider"></div>
@@ -19,6 +23,12 @@ export default {
     preview: String,
     title: String,
     subTitle: String,
+  },
+
+  data(){
+    return {
+      show: false,
+    }
   }
 }
 </script>
