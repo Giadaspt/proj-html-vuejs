@@ -14,8 +14,8 @@
           <div class="nameInfo">
             <!-- al click appare il costo e cambia l'icona -->
             <i 
-              @click="show = !show, getIndex(index)"
-              :class="[!show ? item.iconPlus : item.iconMinus]">
+              @click="show = !show , getIndex(index)"
+              :class="[index == indexIcon ? item.iconMinus : item.iconPlus]">
             </i>
             <h6> {{item.titleInfo}} </h6>
           </div>
